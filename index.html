@@ -261,7 +261,7 @@ if (hr == 0){
     month = "0"+month;
 }
            var ampm = (currentDate.getHours() < 12) ? "AM" : "PM";
-      var datestring = "Time: " +hr+ ":" +min+ ":" +sec+ "    Date: " +date+"-"+month+"-"+year;
+      var datestring = "Time: " +hr+ ":" +min+ ":" +sec+ " "+ampm+"    Date: " +date+"-"+month+"-"+year;
 //var datestring = year+"-"+month+"-"+date+" "+hr+":"+min+":"+sec;
             //console.log(datestring);
             document.getElementById("time").innerHTML = datestring;
