@@ -183,7 +183,7 @@
 			</td> 
 		</tr> 
 	</table> 
-<p class="time">ashok </p>
+<div id="time"></div> 
 	<script> 
 
 		function res(val) { 
@@ -264,9 +264,9 @@ if (sec < 10) {
 }
 
       //var datestring = "Time: " +hr+ ":" +min+ ":" +sec+ "    Date: " +date+"-"+month+"-"+year;
-var datestring = "2024-04-10 12:30"
-  console.log(datestring);
-  document.getElementById(".time").innerHTML = datestring;
+var datestring = year+"-"+month+"-"+date+" "+hr+":"+min+":"+sec;
+            console.log(datestring);
+            document.getElementById("time").innerHTML = datestring;
 }
 
 
