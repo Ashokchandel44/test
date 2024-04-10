@@ -249,12 +249,10 @@ if (sec < 10) {
      if (hr < 10) {
     hr = "0"+hr;
 }
-
-  if (sec < 12) {
-    sec = sec+"AM";
-}  else {
-       sec = sec+"PM";
-}  
+if (hr == 0){
+	hr = 12;
+}
+ 
 
     if (date < 10) {
     date = "0"+date;
@@ -262,10 +260,10 @@ if (sec < 10) {
   if (month < 10) {
     month = "0"+month;
 }
-
-      //var datestring = "Time: " +hr+ ":" +min+ ":" +sec+ "    Date: " +date+"-"+month+"-"+year;
-var datestring = year+"-"+month+"-"+date+" "+hr+":"+min+":"+sec;
-            console.log(datestring);
+           var ampm = (currentDate.getHours() < 12) ? "AM" : "PM";
+      var datestring = "Time: " +hr+ ":" +min+ ":" +sec+ "    Date: " +date+"-"+month+"-"+year;
+//var datestring = year+"-"+month+"-"+date+" "+hr+":"+min+":"+sec;
+            //console.log(datestring);
             document.getElementById("time").innerHTML = datestring;
 }
 
