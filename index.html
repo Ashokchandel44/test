@@ -190,9 +190,23 @@
 			</td> 
 		</tr> 
 	</table> 
+
+
+<button onclick="hideshow()">Show/Hide Time and Date</button>
+
+	
 <div id="time"></div> 
 	<script> 
-
+  function hideshow() {
+  var x = document.getElementById("time");
+  if (x.style.display === "block") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+hideshow();
+		
 		function res(val) { 
 			document.getElementById("answer").value += val 
 		} 
