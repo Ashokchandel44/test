@@ -200,7 +200,11 @@
 <div id="time"> ASHOK</div> 
 	<script> 
  
-
+$(document).ready(function(){
+    $("#toggle").click(function(){
+        $("#time").toggle();
+    });
+});
 		
 		function res(val) { 
 			document.getElementById("answer").value += val 
